@@ -6,3 +6,40 @@
   position: absolute;
   left: 0;
 }
+
+.menu__minimized{
+  animation-name: sidebar__minimize;
+  animation-duration: .3s;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes sidebar__minimize {
+  from{
+    width: 25rem;
+
+  }
+  to{
+    width: 5rem;
+  }
+}
+
+.menu__maximized {
+  animation-name: sidebar__maximize;
+  animation-duration: .3s;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes sidebar__maximize {
+  from {
+    width: 5rem;
+
+  }
+
+  to {
+    width: 25rem;
+  }
+}
