@@ -1,6 +1,6 @@
 const VideoList = function () {
     return (
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 hover:scale-105 transition">
             <section className="w-60 rounded-xl overflow-hidden">
                 <img className="w-60 h-32 object-cover" src="/carousel.png" alt="" />
             </section>
