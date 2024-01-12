@@ -1,4 +1,6 @@
 // import { useState } from 'react';
+import SideBarLink from './SideBarLink'
+import SideBarParagraph from './SideBarParagraph';
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import VideocamOutlinedIcon from '@mui/icons-material/VideocamOutlined';
@@ -21,15 +23,17 @@ const SideBar = function ({isSideBarMinimized, handleSideBarMinimizing}: Props) 
             </div>
 
             <nav className='flex flex-col gap-6'>
-                <a href="#" className='px-4 flex items-center gap-4 active__nav-link relative'>
-                    <HomeOutlinedIcon sx={{ fontSize:30 }} /> <p className={isSideBarMinimized ? '' : 'hidden'}>Home</p>
-                </a>
-                <a href="#" className='px-4 flex items-center gap-4 relative'>
-                    <VideocamOutlinedIcon sx={{ fontSize:30 }} /> <p className={isSideBarMinimized ? '' : 'hidden'}>Movies</p>
-                </a>
-                <a href="#" className='px-4 flex items-center gap-4 relative'>
-                    <LiveTvOutlinedIcon sx={{ fontSize:28 }} /> <p className={` text-nowrap ${isSideBarMinimized ? '' : 'hidden'}`}>Tv Series</p>
-                </a>
+                <SideBarLink>
+                    <HomeOutlinedIcon sx={{ fontSize:30 }} /><SideBarParagraph isSideBarMinimized={isSideBarMinimized}>Home</SideBarParagraph>
+                </SideBarLink>
+
+                <SideBarLink>
+                    <VideocamOutlinedIcon sx={{ fontSize:30 }} /><SideBarParagraph isSideBarMinimized={isSideBarMinimized}>Movies</SideBarParagraph>
+                </SideBarLink>
+
+                <SideBarLink>
+                    <LiveTvOutlinedIcon sx={{ fontSize:28 }} /><SideBarParagraph isSideBarMinimized={isSideBarMinimized}>Tv Series</SideBarParagraph>
+                </SideBarLink>
             </nav>
         </div>
     )
