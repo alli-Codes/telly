@@ -17,9 +17,9 @@ const SideBar = function ({isSideBarMinimized, handleSideBarMinimizing}: Props) 
     }
     return (
         <div className={`h-[100vh] max-w-44 py-16 flex flex-col gap-20 bg-white rounded transition-all duration-500 ease-in	sticky top-0 z-10 ${isSideBarMinimized ? 'menu__maximized' : 'menu__minimized'}`}>
-            <div className='flex items-center px-4 gap-2'>
+            <div className='h-10 flex items-center px-4 gap-2'>
                 <MenuIcon fontSize="large" onClick={handleMenuSize} />
-                <p className={isSideBarMinimized ? '' : 'hidden'}>Telly</p>
+                <img src="/Telly.png" className={`${isSideBarMinimized ? '' : 'hidden'} w-14`} />
             </div>
 
             <nav className='flex flex-col gap-6'>
