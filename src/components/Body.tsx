@@ -1,8 +1,12 @@
 import Header from './Header'
 
-const Body = function () {
+interface Props{
+    isSideBarMinimized: boolean
+}
+
+const Body = function ({isSideBarMinimized}: Props) {
     return (
-        <div className='body bg-green-400 w-full translate-x-[15rem] fixed'>
+        <div className={`body bg-green-40 flex flex-col relative top-0 ${isSideBarMinimized? 'grow' : 'shrink' }`}>
             <Header />
         </div>
     )

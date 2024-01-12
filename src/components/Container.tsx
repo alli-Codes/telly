@@ -6,9 +6,9 @@ import { useState } from "react"
 const Container = function () {
     const [isSideBarMinimized, handleSideBarMinimizing] = useState(false)
     return (
-            <div className="w-full h-screen flex flex-row bg-gray-200">
+            <div className="w-full flex bg-gray-200">
             <SideBar isSideBarMinimized={isSideBarMinimized} handleSideBarMinimizing={handleSideBarMinimizing} />
-            <Body />
+            <Body isSideBarMinimized={isSideBarMinimized} />
             </div>
     )
 }
