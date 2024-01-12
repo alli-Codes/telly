@@ -4,7 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 const Header = function () {
     return (
-        <div className='header flex items-center justify-between sticky top-0'>
+        <div className='header flex items-center justify-between'>
             <section className='search__section bg-white h-14 w-[32rem] flex rounded-full overflow-hidden relative'>
                 <div className='z-10 relative self-center left-4'><SearchIcon /></div>
                 <input className=' w-full h-full absolute py-4 px-12 outline-none rounded' type="text" placeholder='Search on Telly' />
