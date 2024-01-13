@@ -1,4 +1,5 @@
 import VideoList from './VideoList'
+// import 'dotenv/config'
 
 interface Props{
     category: string
@@ -10,11 +11,11 @@ const VideoContainer = function ({category}:Props) {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1ODQyMTJmZDAwYzQ5NDk1YjA1ODE4ZDUwOWM0MjQ5ZiIsInN1YiI6IjY0ODAzMzc2ZDJiMjA5MDBjYTFjYmU5NSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.WO6kAo6F45ZHEhql9x1Uf3ESjaSewMQ0mAoOfVcgK80'
+    authorization: `Bearer ${__TOKEN__}`
   }
-};
+  };
 
-fetch('https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1', options)
+fetch('https://api.themoviedb.org/3/movie/top_rated', options)
   .then(response => response.json())
   .then(response => console.log(response.results))
   .catch(err => console.error(err));
